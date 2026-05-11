@@ -102,7 +102,7 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.05 }}
-              className="group relative rounded-3xl overflow-hidden glass shadow-soft hover:shadow-glass transition-all"
+              className="group relative rounded-3xl overflow-hidden glass shadow-soft transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-glass hover:backdrop-blur-2xl hover:bg-surface-elevated/80"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12">
                 <div
