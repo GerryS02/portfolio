@@ -37,7 +37,7 @@ function Index() {
       <Education />
       <Skills />
       <Projects />
-      <ExperienceInterests />
+      
       <Contact />
       <Footer />
     </main>
