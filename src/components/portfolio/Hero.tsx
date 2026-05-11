@@ -26,7 +26,7 @@ export function Hero() {
                 <span className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-60" />
                 <span className="relative h-1.5 w-1.5 rounded-full bg-emerald-500" />
               </span>
-              Available · Summer 2026
+              Available · Full-time / Internships
             </motion.div>
 
             <motion.h1
