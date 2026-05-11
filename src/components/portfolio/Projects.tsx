@@ -42,6 +42,45 @@ const projects = [
     stack: ["R", "Shiny", "Plotly", "ggplot2"],
     accent: "from-neutral-200 to-neutral-100",
   },
+  {
+    name: "Graphix",
+    tag: "Math Viz · React",
+    desc: "Responsive web-based math visualization tool for exploring definite integrals of polynomials (degree ≤ 2) in real time.",
+    bullets: [
+      "Built with React, Bootstrap, and Plotly.js",
+      "Real-time polynomial computation via React Hooks",
+      "LaTeX-style math rendering with MathJax",
+      "Interactive sliders and dynamic graph visualization",
+    ],
+    stack: ["React", "Plotly.js", "MathJax", "Bootstrap"],
+    accent: "from-zinc-200 to-zinc-100",
+  },
+  {
+    name: "Meal Cost Estimator",
+    tag: "Desktop GUI · Python",
+    desc: "Lightweight desktop GUI for calculating total meal costs including tax and tip with live updates as inputs change.",
+    bullets: [
+      "Python + EGUI desktop application",
+      "Automated 18% tip and 7% tax computation",
+      "Real-time total estimation",
+      "Minimal, user-friendly interface",
+    ],
+    stack: ["Python", "EGUI", "GUI"],
+    accent: "from-stone-200 to-stone-100",
+  },
+  {
+    name: "Track-List",
+    tag: "OOP · Java",
+    desc: "Java-based music library system with fast search, persistent storage, and a modular architecture ready for future features.",
+    bullets: [
+      "Object-Oriented design in Java",
+      "HashMap-powered lookup by title, artist, or genre",
+      "File-based persistence via Java I/O",
+      "Scalable structure for playlists & filters",
+    ],
+    stack: ["Java", "OOP", "HashMap", "File I/O"],
+    accent: "from-neutral-200 to-neutral-100",
+  },
 ];
 
 export function Projects() {
