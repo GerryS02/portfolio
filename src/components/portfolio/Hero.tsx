@@ -94,7 +94,7 @@ export function Hero() {
                   alt="Portrait of Gerry Singh"
                   width={1024}
                   height={1280}
-                  className="w-full h-[520px] object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-[520px] object-contain object-top bg-muted grayscale hover:grayscale-0 transition-all duration-700"
                 />
                 <div className="absolute bottom-4 left-4 right-4 glass rounded-2xl px-4 py-3 flex items-center justify-between text-xs">
                   <div>
