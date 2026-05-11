@@ -5,7 +5,7 @@ import { About } from "@/components/portfolio/About";
 import { Education } from "@/components/portfolio/Education";
 import { Skills } from "@/components/portfolio/Skills";
 import { Projects } from "@/components/portfolio/Projects";
-import { ExperienceInterests } from "@/components/portfolio/ExperienceInterests";
+
 import { Contact, Footer } from "@/components/portfolio/Contact";
 
 export const Route = createFileRoute("/")({
