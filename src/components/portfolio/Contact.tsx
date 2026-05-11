@@ -1,0 +1,122 @@
+import { Mail, MapPin, Github, Linkedin, FileDown, ArrowUpRight } from "lucide-react";
+import { SectionLabel } from "./About";
+
+export function Contact() {
+  return (
+    <section id="contact" className="py-28 px-6 bg-surface">
+      <div className="mx-auto max-w-6xl">
+        <SectionLabel>07 — Contact</SectionLabel>
+        <div className="mt-6 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+          <div className="lg:col-span-7">
+            <h2 className="font-display text-5xl md:text-7xl tracking-tight leading-[0.95]">
+              Got a vision?
+              <br />
+              <span className="italic font-light text-muted-foreground">Let's build it.</span>
+            </h2>
+            <p className="mt-8 text-muted-foreground max-w-md leading-relaxed">
+              Whether it's an internship, a collaboration, or a coffee chat about systems —
+              I'd love to hear from you.
+            </p>
+
+            <div className="mt-10 space-y-3">
+              <a
+                href="mailto:singhg8@spu.edu"
+                className="flex items-center justify-between rounded-2xl glass px-5 py-4 hover:bg-accent transition group"
+              >
+                <div className="flex items-center gap-4">
+                  <Mail className="h-5 w-5 text-muted-foreground" />
+                  <div>
+                    <div className="text-xs text-muted-foreground">Email</div>
+                    <div className="text-sm font-medium">singhg8@spu.edu</div>
+                  </div>
+                </div>
+                <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+              </a>
+              <div className="flex items-center gap-4 rounded-2xl glass px-5 py-4">
+                <MapPin className="h-5 w-5 text-muted-foreground" />
+                <div>
+                  <div className="text-xs text-muted-foreground">Location</div>
+                  <div className="text-sm font-medium">Seattle, WA</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <form className="lg:col-span-5 rounded-3xl glass p-8 shadow-soft space-y-4">
+            <div>
+              <label className="text-xs text-muted-foreground">Name</label>
+              <input
+                className="mt-1.5 w-full rounded-xl bg-background border border-border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring/30"
+                placeholder="Your name"
+              />
+            </div>
+            <div>
+              <label className="text-xs text-muted-foreground">Email</label>
+              <input
+                type="email"
+                className="mt-1.5 w-full rounded-xl bg-background border border-border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring/30"
+                placeholder="you@company.com"
+              />
+            </div>
+            <div>
+              <label className="text-xs text-muted-foreground">Message</label>
+              <textarea
+                rows={4}
+                className="mt-1.5 w-full rounded-xl bg-background border border-border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring/30 resize-none"
+                placeholder="Tell me about the opportunity..."
+              />
+            </div>
+            <button
+              type="button"
+              className="w-full rounded-xl bg-foreground text-background py-3 text-sm font-medium hover:opacity-90 transition"
+            >
+              Send Message
+            </button>
+
+            <div className="flex items-center justify-between pt-4 border-t border-border">
+              <div className="flex gap-2">
+                <a
+                  href="#"
+                  aria-label="GitHub"
+                  className="h-9 w-9 rounded-full bg-secondary flex items-center justify-center hover:bg-accent transition"
+                >
+                  <Github className="h-4 w-4" />
+                </a>
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  className="h-9 w-9 rounded-full bg-secondary flex items-center justify-center hover:bg-accent transition"
+                >
+                  <Linkedin className="h-4 w-4" />
+                </a>
+              </div>
+              <a
+                href="#"
+                className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-foreground transition"
+              >
+                <FileDown className="h-4 w-4" />
+                Resume
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+export function Footer() {
+  return (
+    <footer className="bg-foreground text-background px-6 py-10">
+      <div className="mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+        <div className="opacity-70">© 2026 Gerry Singh — All rights reserved.</div>
+        <div className="flex gap-6 opacity-70">
+          <a href="#about" className="hover:opacity-100">About</a>
+          <a href="#projects" className="hover:opacity-100">Projects</a>
+          <a href="#contact" className="hover:opacity-100">Contact</a>
+        </div>
+        <div className="opacity-70">singhg8@spu.edu</div>
+      </div>
+    </footer>
+  );
+}

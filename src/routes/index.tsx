@@ -1,26 +1,45 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Nav } from "@/components/portfolio/Nav";
+import { Hero } from "@/components/portfolio/Hero";
+import { About } from "@/components/portfolio/About";
+import { Education } from "@/components/portfolio/Education";
+import { Skills } from "@/components/portfolio/Skills";
+import { Projects } from "@/components/portfolio/Projects";
+import { ExperienceInterests } from "@/components/portfolio/ExperienceInterests";
+import { Contact, Footer } from "@/components/portfolio/Contact";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Gerry Singh — Full Stack Developer & Backend Specialist" },
+      {
+        name: "description",
+        content:
+          "Gerry Singh — Computer Science student at Seattle Pacific University specializing in backend engineering, scalable systems, and AI-driven applications.",
+      },
+      { property: "og:title", content: "Gerry Singh — Full Stack Developer" },
+      {
+        property: "og:description",
+        content:
+          "Backend-focused full stack developer building scalable software, AI apps, and innovative systems.",
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
-  return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
-  );
-}
-
 function Index() {
-  return <PlaceholderIndex />;
+  return (
+    <main className="relative min-h-screen bg-background text-foreground overflow-x-hidden">
+      <Nav />
+      <Hero />
+      <About />
+      <Education />
+      <Skills />
+      <Projects />
+      <ExperienceInterests />
+      <Contact />
+      <Footer />
+    </main>
+  );
 }
