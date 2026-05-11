@@ -21,13 +21,22 @@ export function About() {
               Building thoughtful software with a backend-first mindset.
             </h2>
             <p className="mt-8 text-muted-foreground leading-relaxed text-lg">
-              Gerry is a Computer Science student at Seattle Pacific University specializing
-              in full stack development with a strong focus on backend engineering. He enjoys
-              creating innovative software solutions and scalable systems.
+              I'm Gerry, a Computer Science student at Seattle Pacific University with
+              interests in full-stack development and backend systems engineering. I enjoy
+              building scalable, efficient software and working on problems that require both
+              logical structure and creative thinking.
             </p>
             <p className="mt-4 text-muted-foreground leading-relaxed">
-              Outside of development, he creates music, works out, and spends time in nature —
-              the kind of balance that keeps the code clean and the ideas fresh.
+              My primary technical interests lie in backend development, system design, and
+              building reliable web applications. I've worked with technologies such as Java,
+              Spring Boot, MySQL, and AWS, along with frontend tools like React, HTML, CSS,
+              and JavaScript. I enjoy turning complex ideas into clean, functional systems
+              that are both practical and user-focused.
+            </p>
+            <p className="mt-4 text-muted-foreground leading-relaxed">
+              Outside of development, I spend time on music, fitness, and exploring nature.
+              These interests help me stay balanced and often influence how I approach
+              problem-solving with discipline, focus, and creativity.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-2">
