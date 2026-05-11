@@ -6,17 +6,17 @@ const groups = [
   {
     icon: Code,
     title: "Languages",
-    items: ["Java", "C++", "JavaScript", "HTML", "CSS"],
+    items: ["Java", "C++", "SQL", "JavaScript", "HTML", "CSS", "R"],
   },
   {
     icon: Layers,
-    title: "Frameworks & Tech",
-    items: ["Spring Boot", "Spring Security", "MySQL", "Plotly", "Bootstrap", "R / Shiny"],
+    title: "Libraries & Frameworks",
+    items: ["Spring Boot", "MySQL", "ReactJS", "Bootstrap"],
   },
   {
     icon: Wrench,
-    title: "Tools & Platforms",
-    items: ["AWS", "Docker", "Git / GitHub", "CI/CD", "Postman", "Jira"],
+    title: "Developer Tools",
+    items: ["AWS", "Azure", "Docker", "Git", "CI/CD", "Postman", "Jira", "Cypress", "Shiny", "Plotly"],
   },
 ];
 
