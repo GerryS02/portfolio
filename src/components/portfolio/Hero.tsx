@@ -5,10 +5,11 @@ import portrait from "@/assets/gerry-portrait.jpg";
 export function Hero() {
   return (
     <section id="home" className="relative pt-36 pb-24 overflow-hidden">
-      {/* Floating ambient blobs */}
+      {/* Contemporary grid + ambient glow */}
       <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute top-20 -left-24 h-96 w-96 rounded-full bg-accent blur-3xl opacity-60" />
-        <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-secondary blur-3xl opacity-70" />
+        <div className="absolute inset-0 grid-pattern opacity-60" />
+        <div className="absolute top-20 -left-24 h-96 w-96 rounded-full bg-accent blur-3xl opacity-50" />
+        <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-secondary blur-3xl opacity-60" />
       </div>
 
       <div className="mx-auto max-w-6xl px-6">
@@ -18,21 +19,25 @@ export function Hero() {
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-xs text-muted-foreground mb-8"
+              className="inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 text-[11px] font-mono uppercase tracking-[0.18em] text-muted-foreground mb-8"
+              style={{ fontFamily: "var(--font-mono)" }}
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              Available for internships · Summer 2026
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inset-0 rounded-full bg-emerald-500 animate-ping opacity-60" />
+                <span className="relative h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              </span>
+              Available · Summer 2026
             </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.05 }}
-              className="font-display text-[clamp(3rem,9vw,7.5rem)] leading-[0.95] font-medium tracking-tight"
+              className="font-display text-[clamp(3.5rem,10vw,8.5rem)] leading-[0.92] font-normal tracking-tight text-balance"
             >
               Gerry
               <br />
-              <span className="italic font-light text-muted-foreground">Singh.</span>
+              <span className="italic text-muted-foreground">Singh.</span>
             </motion.h1>
 
             <motion.p
