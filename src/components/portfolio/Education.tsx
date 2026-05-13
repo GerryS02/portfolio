@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
 import { SectionLabel } from "./About";
+import spuImg from "@/assets/education/spu.png";
+import edmondsImg from "@/assets/education/edmonds.png";
 
 const items = [
   {
@@ -13,6 +15,7 @@ const items = [
       "Member of Phi Theta Kappa Honor Society",
       "Ranked #10 in College-Level Hackathon at SeattleU",
     ],
+    image: spuImg,
   },
   {
     school: "Edmonds College",
@@ -24,6 +27,7 @@ const items = [
       "Honor Roll for all quarters",
       "Ranked #3 in the All American National Math Competition (Fall 2023)",
     ],
+    image: edmondsImg,
   },
 ];
 
@@ -58,25 +62,33 @@ export function Education() {
                   <span
                     className={`absolute left-2.5 md:left-1/2 top-2 -translate-x-1/2 h-3 w-3 rounded-full bg-foreground ring-4 ring-surface`}
                   />
-                  <div className="rounded-2xl glass p-6 shadow-soft">
-                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                      <GraduationCap className="h-4 w-4" />
-                      {item.period}
+                  <div className="group relative rounded-2xl glass shadow-soft overflow-hidden">
+                    <img
+                      src={item.image}
+                      alt={`${item.school} campus`}
+                      className="absolute inset-0 w-full h-full object-cover grayscale opacity-30 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-60 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/80 to-background/50" />
+                    <div className="relative z-10 p-6">
+                      <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                        <GraduationCap className="h-4 w-4" />
+                        {item.period}
+                      </div>
+                      <h3 className="mt-3 font-display text-xl font-medium">{item.school}</h3>
+                      <p className="text-sm text-muted-foreground mt-1">{item.degree}</p>
+                      <div className="mt-3 inline-flex rounded-full bg-foreground text-background px-3 py-1 text-xs">
+                        GPA {item.gpa}
+                      </div>
+                      <ul
+                        className={`mt-5 space-y-2 text-sm text-muted-foreground ${
+                          i % 2 === 0 ? "md:text-right" : ""
+                        }`}
+                      >
+                        {item.highlights.map((h) => (
+                          <li key={h}>· {h}</li>
+                        ))}
+                      </ul>
                     </div>
-                    <h3 className="mt-3 font-display text-xl font-medium">{item.school}</h3>
-                    <p className="text-sm text-muted-foreground mt-1">{item.degree}</p>
-                    <div className="mt-3 inline-flex rounded-full bg-foreground text-background px-3 py-1 text-xs">
-                      GPA {item.gpa}
-                    </div>
-                    <ul
-                      className={`mt-5 space-y-2 text-sm text-muted-foreground ${
-                        i % 2 === 0 ? "md:text-right" : ""
-                      }`}
-                    >
-                      {item.highlights.map((h) => (
-                        <li key={h}>· {h}</li>
-                      ))}
-                    </ul>
                   </div>
                 </div>
               </motion.div>
