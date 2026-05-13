@@ -76,14 +76,18 @@ export function Contact() {
             <div className="flex items-center justify-between pt-4 border-t border-border">
               <div className="flex gap-2">
                 <a
-                  href="#"
+                  href="https://github.com/GerryS02"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="GitHub"
                   className="h-9 w-9 rounded-full bg-secondary flex items-center justify-center hover:bg-accent transition"
                 >
                   <Github className="h-4 w-4" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.linkedin.com/in/gerrysingh/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="LinkedIn"
                   className="h-9 w-9 rounded-full bg-secondary flex items-center justify-center hover:bg-accent transition"
                 >
