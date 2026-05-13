@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { SectionLabel } from "./About";
+import traymateImg from "@/assets/projects/traymate.png";
+import glowlightImg from "@/assets/projects/glowlight.png";
+import grateImg from "@/assets/projects/grate.png";
+import graphixImg from "@/assets/projects/graphix.jpg";
+import mealImg from "@/assets/projects/meal.png";
+import tracklistImg from "@/assets/projects/tracklist.png";
 
 const projects = [
   {
@@ -14,7 +20,8 @@ const projects = [
       "Reduced manual testing overhead by 40%",
     ],
     stack: ["Spring Boot", "JWT", "AWS", "MySQL", "CI/CD", "Cypress"],
-    accent: "from-zinc-200 to-zinc-100",
+    image: traymateImg,
+    github: "https://github.com/aloepker/TrayMate",
   },
   {
     name: "Glowlight",
@@ -27,7 +34,8 @@ const projects = [
       "LCD digital reporting system",
     ],
     stack: ["Python", "Raspberry Pi", "GPIO", "Embedded"],
-    accent: "from-stone-200 to-stone-100",
+    image: glowlightImg,
+    github: "https://github.com/GerryS02/GlowLight",
   },
   {
     name: "G-rate",
@@ -40,7 +48,8 @@ const projects = [
       "Built with Plotly + ggplot2",
     ],
     stack: ["R", "Shiny", "Plotly", "ggplot2"],
-    accent: "from-neutral-200 to-neutral-100",
+    image: grateImg,
+    github: "https://github.com/GerryS02/G-rate",
   },
   {
     name: "Graphix",
@@ -53,7 +62,8 @@ const projects = [
       "Interactive sliders and dynamic graph visualization",
     ],
     stack: ["React", "Plotly.js", "MathJax", "Bootstrap"],
-    accent: "from-zinc-200 to-zinc-100",
+    image: graphixImg,
+    github: "https://github.com/GerryS02/Graphix",
   },
   {
     name: "Meal Cost Estimator",
@@ -66,7 +76,8 @@ const projects = [
       "Minimal, user-friendly interface",
     ],
     stack: ["Python", "EGUI", "GUI"],
-    accent: "from-stone-200 to-stone-100",
+    image: mealImg,
+    github: "https://github.com/GerryS02/Total-Meal-Cost-Calculator",
   },
   {
     name: "Track-List",
@@ -79,7 +90,8 @@ const projects = [
       "Scalable structure for playlists & filters",
     ],
     stack: ["Java", "OOP", "HashMap", "File I/O"],
-    accent: "from-neutral-200 to-neutral-100",
+    image: tracklistImg,
+    github: "https://github.com/GerryS02/Track-List",
   },
 ];
 
@@ -105,17 +117,30 @@ export function Projects() {
               className="group relative rounded-3xl overflow-hidden glass shadow-soft transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-glass hover:backdrop-blur-2xl hover:bg-surface-elevated/80"
             >
               <div className="grid grid-cols-1 lg:grid-cols-12">
-                <div
-                  className={`lg:col-span-4 bg-gradient-to-br ${p.accent} relative min-h-[220px] flex items-end p-8`}
-                >
-                  <div className="absolute top-6 left-6 text-xs uppercase tracking-[0.2em] text-foreground/60">
+                <div className="lg:col-span-4 relative min-h-[220px] flex items-end p-8 overflow-hidden">
+                  {/* Background image */}
+                  <img
+                    src={p.image}
+                    alt={`${p.name} preview`}
+                    className="absolute inset-0 w-full h-full object-cover grayscale opacity-40 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-60 group-hover:scale-105"
+                  />
+                  {/* Gradient overlay for text legibility */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/70 to-background/30" />
+
+                  <div className="absolute top-6 left-6 text-xs uppercase tracking-[0.2em] text-foreground/60 z-10">
                     0{i + 1}
                   </div>
-                  <div className="absolute top-6 right-6 h-10 w-10 rounded-full bg-foreground text-background flex items-center justify-center transition-transform group-hover:rotate-45">
+                  <a
+                    href={p.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${p.name} on GitHub`}
+                    className="absolute top-6 right-6 h-10 w-10 rounded-full bg-foreground text-background flex items-center justify-center transition-transform duration-300 group-hover:rotate-45 hover:scale-110 z-10"
+                  >
                     <ArrowUpRight className="h-5 w-5" />
-                  </div>
-                  <div>
-                    <div className="text-xs text-foreground/60 mb-2">{p.tag}</div>
+                  </a>
+                  <div className="relative z-10">
+                    <div className="text-xs text-foreground/70 mb-2">{p.tag}</div>
                     <h3 className="font-display text-3xl md:text-4xl tracking-tight text-foreground">
                       {p.name}
                     </h3>
