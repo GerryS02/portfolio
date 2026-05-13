@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { GraduationCap } from "lucide-react";
 import { SectionLabel } from "./About";
+import spuImg from "@/assets/education/spu.png";
+import edmondsImg from "@/assets/education/edmonds.png";
 
 const items = [
   {
@@ -13,6 +15,7 @@ const items = [
       "Member of Phi Theta Kappa Honor Society",
       "Ranked #10 in College-Level Hackathon at SeattleU",
     ],
+    image: spuImg,
   },
   {
     school: "Edmonds College",
@@ -24,6 +27,7 @@ const items = [
       "Honor Roll for all quarters",
       "Ranked #3 in the All American National Math Competition (Fall 2023)",
     ],
+    image: edmondsImg,
   },
 ];
 
