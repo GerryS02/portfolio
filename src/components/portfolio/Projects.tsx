@@ -122,10 +122,12 @@ export function Projects() {
                   <img
                     src={p.image}
                     alt={`${p.name} preview`}
-                    className="absolute inset-0 w-full h-full object-cover grayscale opacity-40 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-60 group-hover:scale-105"
+                    className="absolute inset-0 w-full h-full object-cover grayscale opacity-30 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-55 group-hover:scale-105"
+                    style={{ filter: "grayscale(1) brightness(0.78) contrast(1.05)" }}
                   />
-                  {/* Gradient overlay for text legibility */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/70 to-background/30" />
+                  {/* Gradient overlay for text legibility + tame bright whites */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/75 to-background/45" />
+                  <div className="absolute inset-0 bg-foreground/10 mix-blend-multiply" />
 
                   <div className="absolute top-6 left-6 text-xs uppercase tracking-[0.2em] text-foreground/60 z-10">
                     0{i + 1}
