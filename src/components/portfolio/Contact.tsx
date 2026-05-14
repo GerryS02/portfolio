@@ -1,7 +1,41 @@
 import { Mail, MapPin, Github, Linkedin, FileDown, ArrowUpRight } from "lucide-react";
+import { useState, type FormEvent } from "react";
+import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
 import { SectionLabel } from "./About";
 
+const EMAILJS_SERVICE_ID = "service_tptggv3";
+const EMAILJS_TEMPLATE_ID = "template_jjut80t";
+const EMAILJS_PUBLIC_KEY = "8u2nfM-MHxfJP4fJr";
+
 export function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSending(true);
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        { from_name: name, from_email: email, message, reply_to: email },
+        { publicKey: EMAILJS_PUBLIC_KEY },
+      );
+      toast.success("Message sent! I'll get back to you soon.");
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (err) {
+      console.error("EmailJS error:", err);
+      toast.error("Failed to send. Please try again or email me directly.");
+    } finally {
+      setSending(false);
+    }
+  };
+
   return (
     <section id="contact" className="py-28 px-6 bg-surface">
       <div className="mx-auto max-w-6xl">
@@ -42,10 +76,16 @@ export function Contact() {
             </div>
           </div>
 
-          <form className="lg:col-span-5 rounded-3xl glass p-8 shadow-soft space-y-4">
+          <form
+            onSubmit={handleSubmit}
+            className="lg:col-span-5 rounded-3xl glass p-8 shadow-soft space-y-4"
+          >
             <div>
               <label className="text-xs text-muted-foreground">Name</label>
               <input
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                required
                 className="mt-1.5 w-full rounded-xl bg-background border border-border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring/30"
                 placeholder="Your name"
               />
@@ -54,6 +94,9 @@ export function Contact() {
               <label className="text-xs text-muted-foreground">Email</label>
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
                 className="mt-1.5 w-full rounded-xl bg-background border border-border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring/30"
                 placeholder="you@company.com"
               />
@@ -62,15 +105,19 @@ export function Contact() {
               <label className="text-xs text-muted-foreground">Message</label>
               <textarea
                 rows={4}
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                required
                 className="mt-1.5 w-full rounded-xl bg-background border border-border px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring/30 resize-none"
                 placeholder="Tell me about the opportunity..."
               />
             </div>
             <button
-              type="button"
-              className="w-full rounded-xl bg-foreground text-background py-3 text-sm font-medium hover:opacity-90 transition"
+              type="submit"
+              disabled={sending}
+              className="w-full rounded-xl bg-foreground text-background py-3 text-sm font-medium hover:opacity-90 transition disabled:opacity-60"
             >
-              Send Message
+              {sending ? "Sending…" : "Send Message"}
             </button>
 
             <div className="flex items-center justify-between pt-4 border-t border-border">
