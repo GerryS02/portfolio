@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { Sparkles, Code2, Award, Trophy } from "lucide-react";
 
-const traits = ["Innovative", "Analytical", "Creative", "Disciplined", "Collaborative"];
+const traits = ["Problem-Solver", "Detail-Oriented", "Systems Thinker", "Collaborative", "Agile Experience"];
 
 const cards = [
   { icon: Award, label: "GPA", value: "3.89" },
   { icon: Code2, label: "Focus", value: "Backend Engineering" },
   { icon: Sparkles, label: "Recognition", value: "Merit Scholar" },
-  { icon: Trophy, label: "Activity", value: "Hackathon Competitor" },
+  { icon: Trophy, label: "Academic Excellence", value: "Phi Theta Kappa Honor Society Member" },
 ];
 
 export function About() {
