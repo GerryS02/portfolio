@@ -37,7 +37,7 @@ export function Education() {
       <div className="mx-auto max-w-6xl">
         <SectionLabel>02 — Education</SectionLabel>
         <h2 className="mt-6 font-display text-4xl md:text-5xl tracking-tight max-w-2xl">
-          A foundation built on curiosity and rigor.
+          My time in school.
         </h2>
 
         <div className="mt-14 relative">
