@@ -27,11 +27,10 @@ export function Skills() {
         <SectionLabel>03 — Skills</SectionLabel>
         <div className="mt-6 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <h2 className="font-display text-4xl md:text-5xl tracking-tight max-w-xl">
-            The toolkit behind the work.
+            What I work with
           </h2>
           <p className="text-muted-foreground max-w-sm">
-            A modern stack focused on backend services, APIs, and data — wrapped in clean,
-            maintainable interfaces.
+            Technologies I use in my projects
           </p>
         </div>
 
