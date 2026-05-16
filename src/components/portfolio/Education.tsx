@@ -11,9 +11,9 @@ const items = [
     period: "Expected June 2026",
     gpa: "3.89",
     highlights: [
-      "Merit Scholarship Recipient",
+      "Academic Merit Scholarship Recipient",
       "Member of Phi Theta Kappa Honor Society",
-      "Ranked #10 in College-Level Hackathon at SeattleU",
+      "Top 10 placement in College-Level Hackathon at SeattleU",
     ],
     image: spuImg,
   },
