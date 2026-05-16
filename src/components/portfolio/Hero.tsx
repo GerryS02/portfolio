@@ -37,7 +37,7 @@ export function Hero() {
             >
               Gerry
               <br />
-              <span className="italic text-muted-foreground">Singh.</span>
+              <span className="italic text-muted-foreground">Singh</span>
             </motion.h1>
 
             <motion.p
@@ -72,8 +72,8 @@ export function Hero() {
 
             <div className="mt-16 flex items-center gap-10">
               <Stat number="3.89" label="Cumulative GPA" />
-              <Stat number="3+" label="Featured Projects" />
-              <Stat number="#10" label="SeattleU Hackathon" />
+              <Stat number="6+" label="Full-Stack & Systems Projects" />
+              <Stat number="Top 10" label="SeattleU College Hackathon" />
             </div>
           </div>
 
