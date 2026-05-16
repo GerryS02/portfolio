@@ -11,9 +11,9 @@ const items = [
     period: "Expected June 2026",
     gpa: "3.89",
     highlights: [
-      "Merit Scholarship Recipient",
+      "Academic Merit Scholarship Recipient",
       "Member of Phi Theta Kappa Honor Society",
-      "Ranked #10 in College-Level Hackathon at SeattleU",
+      "Top 10 placement in College-Level Hackathon at SeattleU",
     ],
     image: spuImg,
   },
@@ -23,9 +23,9 @@ const items = [
     period: "Sep 2022 — Jun 2024",
     gpa: "3.91",
     highlights: [
-      "Merit Scholarship Recipient",
-      "Honor Roll for all quarters",
-      "Ranked #3 in the All American National Math Competition (Fall 2023)",
+      "Academic Merit Scholarship Recipient",
+      "Academic Honors Student (Consistent Honor Roll standing)",
+      "3rd place in a College-Level Mathematics Competition (Fall 2023)",
     ],
     image: edmondsImg,
   },
@@ -37,7 +37,7 @@ export function Education() {
       <div className="mx-auto max-w-6xl">
         <SectionLabel>02 — Education</SectionLabel>
         <h2 className="mt-6 font-display text-4xl md:text-5xl tracking-tight max-w-2xl">
-          A foundation built on curiosity and rigor.
+          My time in school.
         </h2>
 
         <div className="mt-14 relative">
