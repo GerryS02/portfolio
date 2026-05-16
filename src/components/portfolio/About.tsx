@@ -1,13 +1,13 @@
 import { motion } from "framer-motion";
 import { Sparkles, Code2, Award, Trophy } from "lucide-react";
 
-const traits = ["Innovative", "Analytical", "Creative", "Disciplined", "Collaborative"];
+const traits = ["Problem-Solver", "Detail-Oriented", "Systems Thinker", "Collaborative", "Agile Experience"];
 
 const cards = [
   { icon: Award, label: "GPA", value: "3.89" },
   { icon: Code2, label: "Focus", value: "Backend Engineering" },
   { icon: Sparkles, label: "Recognition", value: "Merit Scholar" },
-  { icon: Trophy, label: "Activity", value: "Hackathon Competitor" },
+  { icon: Trophy, label: "Academic Excellence", value: "Phi Theta Kappa Honor Society Member" },
 ];
 
 export function About() {
@@ -18,7 +18,7 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
           <div className="lg:col-span-7">
             <h2 className="font-display text-4xl md:text-5xl leading-tight tracking-tight">
-              Building thoughtful software with a backend-first mindset.
+              Building systems that turn ideas into reliable software.
             </h2>
             <p className="mt-8 text-muted-foreground leading-relaxed text-lg">
               I'm Gerry, a Computer Science student at Seattle Pacific University with
