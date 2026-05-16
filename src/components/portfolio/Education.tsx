@@ -23,9 +23,9 @@ const items = [
     period: "Sep 2022 — Jun 2024",
     gpa: "3.91",
     highlights: [
-      "Merit Scholarship Recipient",
-      "Honor Roll for all quarters",
-      "Ranked #3 in the All American National Math Competition (Fall 2023)",
+      "Academic Merit Scholarship Recipient",
+      "Academic Honors Student (Consistent Honor Roll standing)",
+      "3rd place in a College-Level Mathematics Competition (Fall 2023)",
     ],
     image: edmondsImg,
   },
