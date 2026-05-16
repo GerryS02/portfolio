@@ -11,83 +11,82 @@ import tracklistImg from "@/assets/projects/tracklist.png";
 const projects = [
   {
     name: "TrayMate",
-    tag: "AI · Spring Boot",
-    desc: "AI-driven meal ordering app for care facilities with secure multi-user workflows and 4 levels of role-based access control.",
+    tag: "Full-Stack Mobile App",
+    desc: "A meal ordering system for care facilities that supports meal selection for residents independently, with AI-assisted suggestions and automatic validation against dietary restrictions.",
     bullets: [
-      "Spring Boot backend with JWT authentication",
-      "AWS MySQL database with 10+ interconnected tables",
-      "CI/CD via GitHub Actions, Cypress automation",
-      "Reduced manual testing overhead by 40%",
+      "Built Spring Boot backend with JWT authentication and separate user portals for admin, caregiver, medical staff, and residents",
+      "Designed AWS MySQL schema with 10+ relational tables for users, meals, orders, and dietary constraints",
+      "Integrated CI/CD pipeline using GitHub Actions with Cypress automated testing",
+      "Implemented AI-based meal suggestions based on user history and dietary needs",
     ],
-    stack: ["Spring Boot", "JWT", "AWS", "MySQL", "CI/CD", "Cypress"],
+    stack: ["Spring Boot", "Spring Security", "React Native", "AWS RDS (MySQL)", "Gemini API", "CI/CD", "Cypress"],
     image: traymateImg,
     github: "https://github.com/aloepker/TrayMate",
   },
   {
     name: "Glowlight",
-    tag: "Embedded · IoT",
-    desc: "Raspberry Pi climate monitoring system using a DHT11 sensor and RGB LED with a dual-mode hardware UI.",
+    tag: "IoT Device (Raspberry Pi)",
+    desc: "A Raspberry Pi-based real-time climate monitoring system that uses sensor data to provide instant visual feedback through an adaptive RGB LED interface.",
     bullets: [
-      "Real-time climate readings with 98% signal accuracy",
-      "Managed 10+ hardware states across modes",
-      "Python + Raspberry Pi GPIO integration",
-      "LCD digital reporting system",
+      "Captures real-time sensor data with 98% accuracy using DHT11 temperature and humidity sensor",
+      "Built multi-state control system to manage device behavior across different modes",
+      "Developed Python-based GPIO integration for hardware control",
+      "Displayed live readings using LCD output and RGB LED indicators",
     ],
-    stack: ["Python", "Raspberry Pi", "GPIO", "Embedded"],
+    stack: ["Python", "Raspberry Pi", "GPIO", "DHT11 Sensor", "Potentiometer"],
     image: glowlightImg,
     github: "https://github.com/GerryS02/GlowLight",
   },
   {
     name: "G-rate",
-    tag: "Data Viz · R",
-    desc: "Global literacy visualization suite — interactive R/Shiny app exploring 500+ years of data across 150+ countries.",
+    tag: "Data Visualization Web App",
+    desc: "An interactive data visualization web app that explores global literacy trends from 1475 to 2023, allowing users to analyze how literacy rates have evolved across countries and over time.",
     bullets: [
-      "Geospatial choropleth maps",
-      "Time-series analytics across 150+ countries",
-      "Data continuity for sparse historical sets",
-      "Built with Plotly + ggplot2",
+      "Built interactive dashboards using R Shiny with Plotly-powered world map and time-series visualizations",
+      "Designed geospatial choropleth system using sf and rnaturalearth to visualize literacy rates across 150+ countries",
+      "Implemented \"most recent available data\" logic to handle sparse historical records and ensure meaningful map rendering",
+      "Developed filtering and comparison tools enabling multi-country literacy trend analysis over time",
     ],
-    stack: ["R", "Shiny", "Plotly", "ggplot2"],
+    stack: ["R", "Shiny", "Plotly", "ggplot2", "sf", "rnaturalearth"],
     image: grateImg,
     github: "https://github.com/GerryS02/G-rate",
   },
   {
     name: "Graphix",
-    tag: "Math Viz · React",
-    desc: "Responsive web-based math visualization tool for exploring definite integrals of polynomials (degree ≤ 2) in real time.",
+    tag: "React Web App",
+    desc: "A web application for visualizing mathematical functions and integrals in real time.",
     bullets: [
-      "Built with React, Bootstrap, and Plotly.js",
-      "Real-time polynomial computation via React Hooks",
-      "LaTeX-style math rendering with MathJax",
-      "Interactive sliders and dynamic graph visualization",
+      "Built interactive frontend using React and Bootstrap",
+      "Implemented real-time polynomial calculations using React Hooks",
+      "Integrated MathJax for LaTeX-style mathematical rendering",
+      "Created dynamic graph visualizations with Plotly.js and slider controls",
     ],
-    stack: ["React", "Plotly.js", "MathJax", "Bootstrap"],
+    stack: ["React", "Plotly", "MathJax", "Bootstrap"],
     image: graphixImg,
     github: "https://github.com/GerryS02/Graphix",
   },
   {
     name: "Meal Cost Estimator",
-    tag: "Desktop GUI · Python",
+    tag: "Desktop GUI Application",
     desc: "Lightweight desktop GUI for calculating total meal costs including tax and tip with live updates as inputs change.",
     bullets: [
-      "Python + EGUI desktop application",
-      "Automated 18% tip and 7% tax computation",
-      "Real-time total estimation",
+      "Built GUI application using Python for interactive input handling",
+      "Implemented live calculation updates for subtotal, tax, and tip",
+      "Automated percentage-based cost breakdown logic",
       "Minimal, user-friendly interface",
     ],
-    stack: ["Python", "EGUI", "GUI"],
+    stack: ["Python", "GUI Development"],
     image: mealImg,
     github: "https://github.com/GerryS02/Total-Meal-Cost-Calculator",
   },
   {
     name: "Track-List",
-    tag: "OOP · Java",
+    tag: "CLI Application",
     desc: "Java-based music library system with fast search, persistent storage, and a modular architecture ready for future features.",
     bullets: [
-      "Object-Oriented design in Java",
-      "HashMap-powered lookup by title, artist, or genre",
-      "File-based persistence via Java I/O",
-      "Scalable structure for playlists & filters",
+      "Designed object-oriented architecture for scalable music management system",
+      "Implemented HashMap-based search by title, artist, and genre",
+      "Built file-based persistence using Java I/O for data storage",
     ],
     stack: ["Java", "OOP", "HashMap", "File I/O"],
     image: tracklistImg,
@@ -99,10 +98,10 @@ export function Projects() {
   return (
     <section id="projects" className="py-28 px-6 bg-surface">
       <div className="mx-auto max-w-6xl">
-        <SectionLabel>04 — Selected Work</SectionLabel>
+        <SectionLabel>04 — Projects</SectionLabel>
         <div className="mt-6 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <h2 className="font-display text-4xl md:text-5xl tracking-tight max-w-2xl">
-            Projects that explore systems, data, and craft.
+            A collection of things I've built.
           </h2>
         </div>
 
