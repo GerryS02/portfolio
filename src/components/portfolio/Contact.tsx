@@ -132,7 +132,7 @@ export function Contact() {
                   <Github className="h-4 w-4" />
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/gerrysingh/"
+                  href="https://www.linkedin.com/in/gerrysingh"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
@@ -166,7 +166,7 @@ export function Footer() {
           <a href="#projects" className="hover:opacity-100">Projects</a>
           <a href="#contact" className="hover:opacity-100">Contact</a>
         </div>
-        <div className="opacity-70">singhg8@spu.edu</div>
+        
       </div>
     </footer>
   );
