@@ -18,7 +18,7 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 mt-8">
           <div className="lg:col-span-7">
             <h2 className="font-display text-4xl md:text-5xl leading-tight tracking-tight">
-              Building systems that turn ideas into reliable software.
+              Building systems that turn ideas into reliable software
             </h2>
             <p className="mt-8 text-muted-foreground leading-relaxed text-lg">
               I'm Gerry, a Computer Science student at Seattle Pacific University with
