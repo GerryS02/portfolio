@@ -45,7 +45,7 @@ export function Contact() {
             <h2 className="font-display text-5xl md:text-7xl tracking-tight leading-[0.95]">
               Got a vision?
               <br />
-              <span className="italic font-light text-muted-foreground">Let's build it.</span>
+              <span className="italic font-light text-muted-foreground">Let's build it</span>
             </h2>
             <p className="mt-8 text-muted-foreground max-w-md leading-relaxed">
               Whether it's an internship, a collaboration, or a coffee chat about systems —

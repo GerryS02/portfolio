@@ -101,7 +101,7 @@ export function Projects() {
         <SectionLabel>04 — Projects</SectionLabel>
         <div className="mt-6 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <h2 className="font-display text-4xl md:text-5xl tracking-tight max-w-2xl">
-            A collection of things I've built.
+            A collection of things I've built
           </h2>
         </div>
 
