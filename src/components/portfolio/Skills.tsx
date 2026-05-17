@@ -1,22 +1,37 @@
 import { motion } from "framer-motion";
-import { Code, Layers, Wrench } from "lucide-react";
+import { Code, Server, Monitor, BarChart3, Cloud, Wrench } from "lucide-react";
 import { SectionLabel } from "./About";
 
 const groups = [
   {
     icon: Code,
     title: "Languages",
-    items: ["Java", "C++", "SQL", "JavaScript", "HTML", "CSS", "R"],
+    items: ["Java", "C++", "JavaScript", "Python", "SQL", "HTML", "CSS", "R"],
   },
   {
-    icon: Layers,
-    title: "Libraries & Frameworks",
-    items: ["Spring Boot", "MySQL", "ReactJS", "Bootstrap"],
+    icon: Server,
+    title: "Backend & Frameworks",
+    items: ["Spring Boot", "Spring Security (JWT, RBAC)", "REST APIs", "MySQL"],
+  },
+  {
+    icon: Monitor,
+    title: "Frontend",
+    items: ["ReactJS", "React Native", "Bootstrap", "Plotly.js"],
+  },
+  {
+    icon: BarChart3,
+    title: "Data & Visualization",
+    items: ["R Shiny", "ggplot2", "sf", "rnaturalearth", "Plotly"],
+  },
+  {
+    icon: Cloud,
+    title: "Cloud & DevOps",
+    items: ["AWS (RDS)", "Docker", "CI/CD (GitHub Actions)", "Git", "Azure"],
   },
   {
     icon: Wrench,
-    title: "Developer Tools",
-    items: ["AWS", "Azure", "Docker", "Git", "CI/CD", "Postman", "Jira", "Cypress", "Shiny", "Plotly"],
+    title: "Tools & Testing",
+    items: ["Postman", "Cypress", "Jira", "Git", "CI/CD (GitHub Actions)", "Google Gemini API"],
   },
 ];
 
