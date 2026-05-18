@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import logoGS from "@/assets/logo-gs.png";
 
 const links = [
   { href: "#about", label: "About" },
@@ -29,8 +30,8 @@ export function Nav() {
             scrolled ? "glass shadow-soft" : ""
           }`}
         >
-          <a href="#home" className="font-display text-sm font-semibold tracking-tight">
-            <span className="inline-block h-2 w-2 rounded-full bg-foreground mr-2 align-middle" />
+          <a href="#home" className="font-display text-sm font-semibold tracking-tight inline-flex items-center gap-2">
+            <img src={logoGS} alt="GS monogram" width={24} height={24} className="h-6 w-6 object-contain dark:invert" />
             Gerry Singh
           </a>
           <ul className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
