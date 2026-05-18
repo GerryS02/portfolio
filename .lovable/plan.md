@@ -1,12 +1,20 @@
+## Goal
+Add background images to the "Backend Engineering" and "Merit Scholar" cards in the About section, using a full-cover background with dark overlay so text stays readable. The other two cards (GPA, Phi Theta Kappa) remain unchanged.
+
+## Images
+- Backend Engineering card: `https://i.postimg.cc/hGxtYNHh/Your-Product-Built-Right.jpg`
+- Merit Scholar card: `https://i.postimg.cc/L5sRmW0C/Honor-Roll-Certificate-Named-Signatures.png`
+
 ## Changes
 
-**1. Contact section (`src/components/portfolio/Contact.tsx`)**
-- Remove the GitHub / LinkedIn / Resume row from the bottom of the form card (and the divider above it).
-- In the left column, insert a new social links row between the subtitle paragraph and the Email/Location cards, containing GitHub, LinkedIn, and Resume as icon+label pills styled to match the existing glass aesthetic.
+### `src/components/portfolio/About.tsx`
+1. Extend the `cards` array so the Backend Engineering and Merit Scholar entries include an optional `image` field.
+2. In the card rendering loop, conditionally apply a background image when `image` is present:
+   - Use `backgroundImage` inline style pointing to the URL.
+   - Add a dark gradient overlay (`bg-gradient-to-t from-black/80 via-black/40 to-transparent` or similar) so the white/light text remains legible.
+   - Change text colors to white/light variants for image cards (icon, value, label).
+3. Cards without an image keep their existing `glass` styling and colors exactly as they are.
 
-**2. Logo in nav (`src/components/portfolio/Nav.tsx`)**
-- Replace the small black dot next to "Gerry Singh" with a custom "GS" monogram logo inspired by the uploaded reference (two interlocking rounded letterforms in a single stroke weight).
-- Generate the logo as a transparent PNG via imagegen using the uploaded reference image as inspiration (interlocking G+S, single uniform stroke, minimal, monochrome so it inherits the foreground color via CSS where possible — otherwise use as-is at small size).
-- Save to `src/assets/logo-gs.png` and import it into `Nav.tsx`, rendering at roughly h-6 w-6 in place of the dot.
-
-No other components, layout, or copy will change.
+## Out of scope
+- No changes to card layout, grid, animation, or non-image cards.
+- No new dependencies needed.
