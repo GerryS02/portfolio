@@ -7,21 +7,10 @@ const cards: Array<{
   icon: typeof Award;
   label: string;
   value: string;
-  image?: string;
 }> = [
   { icon: Award, label: "GPA", value: "3.89" },
-  {
-    icon: Code2,
-    label: "Focus",
-    value: "Backend Engineering",
-    image: "https://i.postimg.cc/hGxtYNHh/Your-Product-Built-Right.jpg",
-  },
-  {
-    icon: Sparkles,
-    label: "Recognition",
-    value: "Merit Scholar",
-    image: "https://i.postimg.cc/L5sRmW0C/Honor-Roll-Certificate-Named-Signatures.png",
-  },
+  { icon: Code2, label: "Focus", value: "Backend Engineering" },
+  { icon: Sparkles, label: "Recognition", value: "Merit Scholar" },
   { icon: Trophy, label: "Academic Excellence", value: "Phi Theta Kappa Honor Society Member" },
 ];
 
@@ -74,21 +63,11 @@ export function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.07 }}
-                className={
-                  c.image
-                    ? "relative overflow-hidden rounded-2xl p-5 shadow-soft hover:-translate-y-1 transition-transform bg-cover bg-center min-h-[160px]"
-                    : "rounded-2xl glass p-5 shadow-soft hover:-translate-y-1 transition-transform"
-                }
-                style={c.image ? { backgroundImage: `url(${c.image})` } : undefined}
+                className="rounded-2xl glass p-5 shadow-soft hover:-translate-y-1 transition-transform"
               >
-                {c.image && (
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/55 to-black/20" />
-                )}
-                <div className="relative">
-                  <c.icon className={c.image ? "h-5 w-5 text-white/90" : "h-5 w-5 text-muted-foreground"} />
-                  <div className={c.image ? "mt-6 font-display text-xl font-medium text-white" : "mt-6 font-display text-xl font-medium"}>{c.value}</div>
-                  <div className={c.image ? "text-xs text-white/80 mt-1" : "text-xs text-muted-foreground mt-1"}>{c.label}</div>
-                </div>
+                <c.icon className="h-5 w-5 text-muted-foreground" />
+                <div className="mt-6 font-display text-xl font-medium">{c.value}</div>
+                <div className="text-xs text-muted-foreground mt-1">{c.label}</div>
               </motion.div>
             ))}
           </div>
