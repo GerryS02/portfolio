@@ -5,33 +5,6 @@ import portrait from "@/assets/gerry-portrait.jpg";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 export function Hero() {
-  const mouseX = useMotionValue(0);
-const mouseY = useMotionValue(0);
-
-const springX = useSpring(mouseX, {
-  stiffness: 150,
-  damping: 15,
-});
-
-const springY = useSpring(mouseY, {
-  stiffness: 150,
-  damping: 15,
-});
-
-const handleMouseMove = (e: React.MouseEvent<HTMLHeadingElement>) => {
-  const rect = e.currentTarget.getBoundingClientRect();
-
-  const x = e.clientX - rect.left - rect.width / 2;
-  const y = e.clientY - rect.top - rect.height / 2;
-
-  mouseX.set(x * 0.05);
-  mouseY.set(y * 0.05);
-};
-
-const handleMouseLeave = () => {
-  mouseX.set(0);
-  mouseY.set(0);
-};
   return (
     <section id="home" className="relative pt-36 pb-24 overflow-hidden">
       {/* Contemporary grid + ambient glow */}
@@ -58,7 +31,7 @@ const handleMouseLeave = () => {
               Available · Full-time / Internships
             </motion.div>
 
-            {/* <motion.h1
+            <motion.h1
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.05 }}
@@ -67,39 +40,8 @@ const handleMouseLeave = () => {
               Gerry
               <br />
               <span className="italic text-muted-foreground">Singh</span>
-            </motion.h1> */}
-<motion.h1
-  initial={{ opacity: 0, y: 24 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 0.7, delay: 0.05 }}
-  whileHover={{
-    scale: 1.02,
-  }}
-  style={{
-    x: springX,
-    y: springY,
-  }}
-  onMouseMove={handleMouseMove}
-  onMouseLeave={handleMouseLeave}
-  className="group relative inline-block font-display text-[clamp(3.5rem,10vw,8.5rem)] leading-[0.92] font-normal tracking-tight text-balance cursor-default"
->
-  <motion.div
-    whileHover={{
-      textShadow:
-        "0px 0px 20px rgba(255,255,255,0.35), 0px 0px 40px rgba(255,255,255,0.15)",
-    }}
-    transition={{ duration: 0.3 }}
-  >
-    Gerry
-    <br />
+            </motion.h1>
 
-    <span className="italic text-muted-foreground transition-all duration-500 group-hover:text-white">
-      Singh
-    </span>
-  </motion.div>
-
-  <div className="pointer-events-none absolute inset-0 opacity-0 blur-3xl transition-opacity duration-500 group-hover:opacity-100 bg-white/10" />
-</motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
