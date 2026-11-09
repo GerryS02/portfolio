@@ -37,7 +37,8 @@ export function Hero() {
               transition={{ duration: 0.7, delay: 0.05 }}
               className="font-display text-[clamp(3.5rem,10vw,8.5rem)] leading-[0.92] font-normal tracking-tight text-balance"
             >
-              Gerry
+              {/* Gerry */}
+              Gurpreet
               <br />
               <span className="italic text-muted-foreground">Singh</span>
             </motion.h1>

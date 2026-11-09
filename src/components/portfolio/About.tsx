@@ -25,7 +25,7 @@ export function About() {
               Building systems that turn ideas into reliable software
             </h2>
             <p className="mt-8 text-muted-foreground leading-relaxed text-lg">
-              I'm Gerry, a Computer Science student at Seattle Pacific University with
+              I am a Computer Science graduate from Seattle Pacific University with
               interests in full-stack development and backend systems engineering. I enjoy
               building scalable, efficient software and working on problems that require both
               logical structure and creative thinking.
