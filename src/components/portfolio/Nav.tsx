@@ -32,7 +32,8 @@ export function Nav() {
         >
           <a href="#home" className="font-display text-sm font-semibold tracking-tight inline-flex items-center gap-2">
             <img src={logoGS} alt="GS monogram" width={24} height={24} className="h-6 w-6 object-contain dark:invert" />
-            Gerry Singh
+            {/* Gerry Singh */}
+            Gurpreet Singh
           </a>
           <ul className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
             {links.map((l) => (
